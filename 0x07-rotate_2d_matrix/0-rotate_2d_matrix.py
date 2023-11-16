@@ -9,7 +9,5 @@ def rotate_2d_matrix(matrix):
         for j in range(i, len(matrix)):
             matrix[j][i], matrix[i][j] = matrix[i][j], matrix[j][i]
     # Reverse the order of each row in the transposed matrix
-    for i in range(len(matrix) - 1):
-        for j in range(i, len(matrix)):
-            matrix[j][i], matrix[j][len(matrix) - 1 - i] =\
-                matrix[j][len(matrix) - 1 - i], matrix[j][i]
+    for row in matrix:
+        row.reverse()
